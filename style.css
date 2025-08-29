@@ -1,152 +1,262 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-/*Implementar fonte*/
-:root {
-    --laranja-claro: #e07c2f;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap'); /* <<< Fonte arredondada */
+
+@font-face {
+  font-family: 'Khofira';
+  src: url('fonts/Khofira.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+:root {
+  --laranja: #ff5e00;
+  --Laranja-claro: #e99e62;
+  --alto-contraste-fundo: #000000;
+  --alto-contraste-texto: #ffffff;
+  --alto-contraste-link: #ffd700;
+  --destaque: #c43a04;
+}
+
+* { box-sizing: border-box; }
 
 body {
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--Laranja);
+  background-color: #ffffff;
 }
 
-header {
-    background-color: #ffffff;
+:focus-visible {
+  outline: 3px solid var(--Laranja-claro);
+  outline-offset: 2px;
 }
 
-section {
-    padding-bottom: 5rem;
+header { background-color: #ffffff; }
+section { padding-bottom: 5rem; }
+
+/* MENU */
+.menu-central {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-link {
-    color: #CB6D43; /*alteração na cor*/
-    font-weight: 600;
+.menu-central .nav-link {
+  color: var(--Laranja);
+  font-weight: 700;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+.menu-central .nav-link:hover { color: var(--Laranja-claro); }
+
+/* INÍCIO */
 .inicio-fundo {
-    background-image: url("img/4965007.jpg"); /* Caminho ajustado */
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 100%;
-    height: 606px;
-    padding: 40px;
-    margin: 0 auto;
+  background-image: url('img/4965007.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 80px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
-/* posicionamento para a imagem à direita */
 .img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 45rem;
+  height: auto;
 }
 
 .esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    height: 3em;
-    align-content: center;
+  background-color: var(--destaque);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+  align-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--Laranja);
+  text-shadow: -3px 3px var(--Laranja-claro);
 }
 
-/* Corrigido: ID agora é igual ao do HTML (#MPB) */
-#MPB {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: 
-        url("img/179 Sem Título_20250827101443.png") top right no-repeat,
-        url("img/179 Sem Título_20250827101443.png") bottom left no-repeat;
-    background-size: 180px 180px;
+.display-4 .boas-vindas {
+  color: #ffffff;
+  text-shadow: -3px 3px var(--Laranja-claro);
 }
 
-#MPB .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
+/* SPIKE PRO */
+#SpikePro {
+  position: relative;
+  padding-top: 5rem;
+  margin: 3rem 0;
+  background: url('img/flor.png') top right no-repeat,
+              url('img/flor-esquerda.png') bottom left no-repeat;
+  background-size: 180px 180px;
 }
+
+#SpikePro .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
 
 h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+  font-family: 'Quicksand', sans-serif; 
+  font-size: 2.8em;
+  color: var(--destaque);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-#galeria {
-    background-color: #FAF4F4;
+
+#SpikePro h2,     
+#galeria h2,       
+#contato h2 {      
+  font-family: 'Khofira', cursive;
+  font-size: 3.2em;  
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: var(--destaque);
+}
+
+#galeria { 
+  background-color: #f0b085; 
+  border-radius: 20px; 
+  padding: 2rem;      
 }
 
 .fundo-galeria {
-    background: url("img/179 Sem Título_20250827101443.png") bottom right no-repeat;
-    background-size: 180px 180px;
+  background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+  background-size: 180px 180px;
 }
 
 #contato {
-    background-image: url("img/4965007.jpg");
-    background-size: cover;
-    padding: 4rem 0;
+  background: none;
+  padding: 4rem 0;
 }
 
+/* FORMULÁRIO */
 .formulario {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  font-weight: bold;
+  color: var(--Laranja);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .formulario button {
-    background-color: #CB6D43;
-    border: none;
-    font-weight: bold;
+  background-color: var(--destaque);
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .form-control {
-    background-color: #F1EDEF;
+  background-color: #F1EDEF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
-/* Acessibilidade */
-.menu-acessibilidade {
-    position: fixed;
-    top: 2rem;
-    right: 20px;
-    z-index: 1000;
+/* ACESSIBILIDADE */
+.menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+
+#botao-acessibilidade {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  background-color: var(--destaque);
+  color: #fff;
+  border: none;
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-.rotacao-botao {
-    transform: rotate(-90deg);
-    transform-origin: right center;
+#opcoes-acessibilidade {
+  position: fixed;
+  top: 64px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .2s ease, transform .2s ease;
 }
 
-.opcoes-acessibilidade {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
+#opcoes-acessibilidade[hidden] { display: none !important; }
+#opcoes-acessibilidade.is-open { opacity: 1; transform: translateY(0); }
+
+.alto-contraste {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
 }
 
-.opcoes-acessibilidade button {
-    margin-bottom: 5px;
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
 }
 
-.apresenta-lista {
-    display: none;
+.alto-contraste .nav-link { color: var(--alto-contraste-link); }
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+  background-color: var(--alto-contraste-link);
+  color: var(--alto-contraste-fundo);
 }
 
+.alto-contraste #SpikePro,
+.alto-contraste #galeria,
+.alto-contraste .fundo-galeria { background: none; }
