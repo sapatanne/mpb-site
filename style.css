@@ -13,7 +13,7 @@
 :root {
   --laranja: #ff5e00;
   --Laranja-claro: #e99e62;
-  --alto-contraste-fundo: #000000;
+  --alto-contraste-fundo: #9e1401;
   --alto-contraste-texto: #ffffff;
   --alto-contraste-link: #ffd700;
   --destaque: #c43a04;
@@ -36,7 +36,6 @@ body {
 header { background-color: #ffffff; }
 section { padding-bottom: 5rem; }
 
-/* MENU */
 .menu-central {
   position: absolute;
   top: 20px;
@@ -61,9 +60,8 @@ section { padding-bottom: 5rem; }
 
 .menu-central .nav-link:hover { color: var(--Laranja-claro); }
 
-/* INÍCIO */
 .inicio-fundo {
-  background-image: url('img/4965007.png');
+  background-image: url('img/4965007.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -121,16 +119,16 @@ section { padding-bottom: 5rem; }
 }
 
 /* SPIKE PRO */
-#SpikePro {
+#MPB {
   position: relative;
   padding-top: 5rem;
   margin: 3rem 0;
-  background: url('img/flor.png') top right no-repeat,
-              url('img/flor-esquerda.png') bottom left no-repeat;
+  background: url('img/flor (1).png') top right no-repeat,
+              url('img/flor-esquerda (1).png') bottom left no-repeat;
   background-size: 180px 180px;
 }
 
-#SpikePro .container {
+#MPB .container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +147,7 @@ h2 {
 }
 
 
-#SpikePro h2,     
+#MPB h2,     
 #galeria h2,       
 #contato h2 {      
   font-family: 'Khofira', cursive;
@@ -166,7 +164,7 @@ h2 {
 }
 
 .fundo-galeria {
-  background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+  background: url('img/flor-bottom-direita (1).png') bottom right no-repeat;
   background-size: 180px 180px;
 }
 
@@ -180,7 +178,7 @@ h2 {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px rgba(190, 54, 0, 0.15);
   font-weight: bold;
   color: var(--Laranja);
   font-family: 'Montserrat', sans-serif;
@@ -202,7 +200,6 @@ h2 {
   font-weight: 500;
 }
 
-/* ACESSIBILIDADE */
 .menu-acessibilidade { position: fixed; top: 20px; right: 20px; z-index: 1000; }
 
 #botao-acessibilidade {
