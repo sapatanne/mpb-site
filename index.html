@@ -1,147 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>MPB</title>
+    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MPB</title>
+    <style>
+      #botao-acessibilidade { position: fixed; top: 16px; right: 16px; z-index: 1050; }
+      #opcoes-acessibilidade { position: fixed; top: 64px; right: 16px; display: none; gap: 0.5rem; z-index: 1049; }
+      #opcoes-acessibilidade.mostrar { display: flex; }
+      header .nav { margin-top: 0 !important; }
+      .pt-6 { padding-top: 3rem; }
+      img { max-width: 100%; height: auto; }
+    </style>
+  </head>
 
-  <!-- Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <body>
+    <header class="p-3">
+      <nav class="container d-flex align-items-center justify-content-between" aria-label="Navegação principal">
+        <a href="#inicio">
+          <img src="img/logo2spik.png" class="logo-site" alt="Logo SpikePro" loading="lazy" decoding="async" />
+        </a>
 
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+        <ul class="nav menu-central">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
 
-  <!-- Fonte + CSS -->
-  <link rel="stylesheet" href="styles.css">
-</head>
+        <div id="acessibilidade" class="menu-acessibilidade">
+          <button id="botao-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false" aria-controls="opcoes-acessibilidade">
+            Acessibilidade
+          </button>
 
-<body>
-  <header class="p-3">
-    <nav class="container d-flex justify-content-between align-items-center">
-      <img src="img/logo (1).png" class="nav-img" alt="Logo MPB" loading="lazy">
-
-      <ul class="nav mt-5">
-        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-      </ul>
-
-      <!-- Acessibilidade -->
-      <div id="acessibilidade" class="menu-acessibilidade">
-        <button id="botao-acessibilidade" class="btn btn-primary rotacao-botao fw-bold">Acessibilidade</button>
-        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-          <button id="aumentar-fonte" class="btn btn-primary fw-bold">A +</button>
-          <button id="diminuir-fonte" class="btn btn-primary fw-bold">A -</button>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container my-5">
-
-    <!-- Seção Início -->
-    <section id="inicio" class="my-5">
-      <div class="inicio-fundo d-flex justify-content-between align-items-center">
-        <div class="esquerda-conteudo">
-          <h1 class="display-4 text-white fst-italic fw-bold">Venha conhecer</h1>
-          <img src="img/logo-2 (1).png" class="mb-3" width="563" height="278" alt="Logo alternativo MPB" loading="lazy">
-          <a href="#MPB" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
-        </div>
-        <img src="img/173 Sem Título_20250821225829.png" alt="Cantores famosos da MPB"
-          title="Ney Matogrosso, Rita Lee, Maria Bethânia e outros" class="img-fluid img-inicio" loading="lazy">
-      </div>
-    </section>
-
-    <!-- Seção MPB -->
-    <section id="MPB" class="my-5 pt-6 secao-MPB">
-      <div class="container d-flex align-items-center">
-        <div class="col-4 d-flex justify-content-center">
-          <img src="img/image (1) (1).png" class="rounded-pill" alt="Cantor de MPB" width="273" height="331" loading="lazy">
-        </div>
-        <div class="col-5">
-          <h2>O que foi a MPB</h2>
-          <p class="p-2">
-            A MPB (Música Popular Brasileira) é um gênero musical que surgiu no Brasil na década de 1960,
-            combinando elementos da música tradicional brasileira, como o samba, a bossa nova e o baião,
-            com influências internacionais, como o jazz e o rock. Ela se destaca por suas letras poéticas e críticas,
-            abordando temas que vão desde o amor e a cultura até questões sociais e políticas.
-            Artistas como Caetano Veloso, Gilberto Gil, Elis Regina e Chico Buarque ajudaram a consolidar o estilo,
-            tornando-o um símbolo da identidade cultural brasileira. Até hoje, a MPB é reconhecida por sua riqueza
-            melódica e por sua capacidade de se reinventar, mantendo viva a essência da música nacional.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Galeria -->
-    <section id="galeria">
-      <h2 class="text-center pt-5">Galeria</h2>
-      <div class="container p-3 mt-3 fundo-galeria">
-        <div class="row justify-content-md-center">
-          <div class="col-md-4">
-            <img src="img/171 Sem Título_20250821220000.png" class="img-fluid rounded-5" alt="Imagem 1 MPB"
-              loading="lazy">
-          </div>
-          <div class="col-md-4">
-            <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5" alt="Banda Os Mutantes"
-              loading="lazy">
+          <div id="opcoes-acessibilidade" class="opcoes-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+            <button id="diminuir-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir o tamanho da fonte">A-</button>
+            <button id="alterna-contraste" class="btn btn-primary fw-bold" aria-label="Alternar o contraste de cores">
+              <i class="bi bi-shadows"></i>
+            </button>
           </div>
         </div>
-        <div class="row mt-4 justify-content-md-center">
-          <div class="col-md-4">
-            <img src="img/171 Sem Título_20250821215626.png" class="img-fluid rounded-5" alt="Imagem 2 MPB"
-              loading="lazy">
+      </nav>
+    </header>
+
+    <main class="container my-5">
+      <!-- INÍCIO -->
+      <section id="inicio" class="my-5">
+        <div class="inicio-fundo d-flex justify-content-between align-items-center">
+          <div class="esquerda-conteudo">
+            <!-- Removi text-white e envolvi a frase em span .boas-vindas -->
+            <h1 class="display-4 fst-italic fw-bold">
+              <span class="boas-vindas">Boas-vindas a</span>
+            </h1>
+
+            <img
+              src="img/logo1spik.png"
+              class="mb-3"
+              alt="Marca SpikePro"
+              width="563"
+              height="278"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <a href="#SpikePro" class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero conhecer!</a>
           </div>
-          <div class="col-md-4">
-            <img src="img/171 Sem Título_20250821215821.png" class="img-fluid rounded-5" alt="Imagem 3 MPB"
-              loading="lazy">
+
+          <img
+            src="img/os_jogadores.png"
+            alt="Obra Os Jogadores"
+            title="Os Jogadores"
+            class="img-fluid img-inicio"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
+
+    
+      <section id="SpikePro" class="my-5 pt-6 secao-SpikePro" tabindex="0" aria-label="Seção explicativa sobre a SpikePro">
+        <div class="container d-flex align-items-center">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <img
+              src="img/image1spik.webp"
+              class="rounded-pill"
+              width="273"
+              height="331"
+              alt="Ilustração SpikePro"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="col-12 col-md-8 mt-4 mt-md-0">
+            <h2>O que foi a MPB?</h2>
+            <p class="p-1">
+            A MPB (Música Popular Brasileira) é um gênero musical que surgiu no Brasil na década de 1960, combinando elementos da música tradicional brasileira, como o samba, a bossa nova e o baião, com influências internacionais, como o jazz e o rock. Ela se destaca por suas letras poéticas e críticas, abordando temas que vão desde o amor e a cultura até questões sociais e políticas. Artistas como Caetano Veloso, Gilberto Gil, Elis Regina e Chico Buarque ajudaram a consolidar o estilo, tornando-o um símbolo da identidade cultural brasileira. Até hoje, a MPB é reconhecida por sua riqueza melódica e por sua capacidade de se reinventar, mantendo viva a essência da música nacional.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contato -->
-    <section id="contato">
-      <div class="container p-5 d-flex justify-content-center">
-        <div class="col-md-8 col-lg-10 rounded-5 formulario">
-          <h2 class="mb-3">Entre em contato</h2>
-          <form>
-            <div class="form-group mb-3">
-              <label for="nome">Nome</label>
-              <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                placeholder="Digite seu nome completo">
+  
+      <section id="galeria" tabindex="0" aria-label="Seção de galeria de imagens">
+        <h2 class="text-center pt-5">Galeria</h2>
+        <div class="container p-3 mt-3 fundo-galeria">
+          <div class="row justify-content-md-center g-4">
+            <div class="col-md-4">
+              <img
+                src="img/jogadorasfemininas.jpg"
+                class="img-fluid rounded-5"
+                alt="Melhores jogadoras do vôlei feminino"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div class="form-group mb-3">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                placeholder="Digite seu email">
+
+            <div class="col-md-4">
+              <img
+                src="img/jogadormasculino.jpg"
+                class="img-fluid rounded-5"
+                alt="Jogador Italiano Matey Kaziyski com a maior impulsão vertical já registrada"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div class="form-group mb-3">
-              <label for="mensagem">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                placeholder="Escreva sua mensagem"></textarea>
+          </div>
+
+          <div class="row mt-1 justify-content-md-center g-4">
+            <div class="col-md-4">
+              <img
+                src="img/areiafeminino.avif"
+                class="img-fluid rounded-5"
+                alt="Ana Patrícia e Duda na final do vôlei de praia feminino 2024"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
+
+            <div class="col-md-4">
+              <img
+                src="img/areiamasculino.webp"
+                class="img-fluid rounded-5"
+                alt="Olimpíadas: Brasil x Letônia nas quartas de final do vôlei de praia masculino"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-          </form>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- Rodapé -->
-  <footer class="text-center p-3 fst-italic">
-    <p>Acesse nossas redes:</p>
-    <i class="bi bi-whatsapp"></i>
-    <i class="bi bi-instagram"></i>
-    <i class="bi bi-tiktok"></i>
-    <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-  </footer>
+      <section id="contato">
+        <div class="container p-3 d-flex justify-content-center">
+          <div class="col-md-8 col-lg-10 rounded-5 formulario">
+            <h2 class="mb-3">ENTRE EM CONTATO</h2>
 
-  <script src="script.js"></script>
-</body>
+            <form>
+              <div class="form-group mb-3">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-control rounded-3 mt-1"
+                  placeholder="Digite seu nome completo"
+                />
+              </div>
 
+              <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control rounded-3 mt-1"
+                  placeholder="Digite seu email"
+                />
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="form-control rounded-4 mt-2"
+                  rows="4"
+                  placeholder="Escreva sua mensagem"
+                ></textarea>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg rounded-pill">
+                  Enviar mensagem
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    
+    <footer class="text-center p-3 fst-italic">
+      <p>Acesse nossas redes:</p>
+      <i class="bi bi-whatsapp" aria-label="WhatsApp"></i>
+      <i class="bi bi-instagram" aria-label="Instagram"></i>
+      <i class="bi bi-tiktok" aria-label="TikTok"></i>
+      <p class="mt-3">©2025 MPB - Todos os direitos reservados.</p>
+    </footer>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="script.js"></script>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const botao = document.getElementById("botao-acessibilidade");
+        const opcoes = document.getElementById("opcoes-acessibilidade");
+
+        if (botao && opcoes) {
+          botao.addEventListener("click", function () {
+            const aberto = opcoes.classList.toggle("mostrar");
+            botao.setAttribute("aria-expanded", String(aberto));
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
 
